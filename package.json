@@ -2,9 +2,11 @@
   "name": "natours",
   "version": "0.0.2",
   "description": "Landing page for Natours",
-  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist",
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/ban2orsolic/Natours#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.3.2",
     "node-sass": "^7.0.1"
   }
 }
