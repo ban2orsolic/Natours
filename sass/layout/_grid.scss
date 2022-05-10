@@ -41,3 +41,17 @@
     );
   }
 }
+
+.grid-addon {
+  // max-width: 40rem;
+  display: grid;
+  row-gap: 6.4rem;
+  column-gap: 3rem;
+  // align-items: center;
+  // justify-items: center;
+  // background-color: aqua;
+}
+.grid--3-cols {
+  //grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
+}
