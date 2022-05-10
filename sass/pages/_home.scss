@@ -3,3 +3,23 @@
   padding: 35rem 0;
   margin-top: -25vh;
 }
+.section-features {
+  padding: 20rem 0;
+  margin-top: -12rem;
+
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/nat-4.jpg);
+  background-size: cover;
+
+  // transformacija sekcije ukoso
+  transform: skewY(-7.5deg);
+
+  // vraćanje elemenata u ispravnu poziciju - samo direct child
+  & > * {
+    transform: skewY(7.5deg);
+  }
+}
