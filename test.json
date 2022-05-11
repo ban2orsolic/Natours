@@ -1,15 +1,14 @@
 {
   "name": "natours",
   "type": "module",
-  "version": "0.1.3",
-  "release-date": "11.5.2025",
+  "version": "1.0.9",
+  "release-date": "11.5.2022",
   "description": "Landing page for Natours",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html",
     "build": "parcel build index.html --dist-dir ./dist",
     "style": "parcel build css/style.css",
-    "update": "npm version patch",
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "repository": {

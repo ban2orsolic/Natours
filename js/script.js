@@ -5,8 +5,11 @@ console.log('hello!', version);
 const verEl = document.querySelector('.ver');
 verEl.textContent = version;
 
-// potrebno za development kada se koristi Parcel da bi se stranica ispravno refreshala
+// set current year on page
+const yearEl = document.querySelector('.year');
+yearEl.textContent = new Date().getFullYear();
 
+// potrebno za development kada se koristi Parcel da bi se stranica ispravno refreshala
 if (module.hot) {
   module.hot.accept();
 }
