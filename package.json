@@ -9,7 +9,7 @@
     "start": "parcel index.html",
     "build": "parcel build index.html --dist-dir ./dist",
     "style": "parcel build css/style.css",
-    "update": "npm version patch",
+    "update": "npm version patch && node js/app.js",
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "repository": {
