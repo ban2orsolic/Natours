@@ -1,0 +1,66 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  background-color: rgba($color-white, 0.45);
+  border-radius: 3px;
+  padding: 6rem;
+
+  // ovaj padding se koristi da element (krug) koji je pomaknut ne prelazi u padding zonu
+  padding-left: 9rem;
+  font-size: $default-font-size;
+
+  //pravljenje poligona sa skew propertyem, 12.01 ovo 01 je dodano je re pojavi artefakt sa lijeve strane
+  transform: skewX(-12.01deg);
+
+  // potrebno jer je __caption absolute
+  position: relative;
+
+  &__shape {
+    // treba obavezno staviti width and height da se dobije efekt da text obilazi sliku
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    //background-color: orangered;
+
+    clip-path: circle(50% at 50% 50%);
+    // odmicanje kruga od texta - ne kristiti margin, i ispravljanje skewX
+    transform: translateX(-3rem) skewX(12deg);
+  }
+  &__img {
+    // fleksibilna slika, uvijek se mora postaviti širina ili visina
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    //korekcija animacije
+    backface-visibility: hidden;
+    transition: all 0.5s;
+  }
+  &__text {
+    // ispravka skewX
+    transform: skewX(12deg);
+  }
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    // initial state - skrivanje elementa
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+  }
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  &:hover &__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%);
+  }
+}
