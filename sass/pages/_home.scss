@@ -38,21 +38,7 @@
     clip-path: polygon(0 35%, 50% 0, 100% 35%, 100% 100%, 0 100%);
   }
 }
-.addon {
-  font-size: 1.2rem;
-  color: $color-white;
 
-  &-link:link,
-  &-link:visited {
-    text-decoration: none;
-    color: #bbb;
-    // display: inline-block;
-    padding: 0.3rem;
-  }
-  &-paragraph:not(:last-child) {
-    margin-bottom: 1.6rem;
-  }
-}
 .section-tours {
   background-color: $color-grey-light-0;
   padding: 25rem 0 15rem 0;
