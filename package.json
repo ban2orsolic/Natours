@@ -2,7 +2,7 @@
   "name": "natours",
   "type": "module",
   "version": "0.2.1",
-  "release": "15.5.2022",
+  "release": "17.5.2022",
   "description": "Landing page for Natours",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
