@@ -5,3 +5,11 @@
     clear: both;
   }
 }
+
+// centriranje elementa kada se koristi float po vertikali i horizontali
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
