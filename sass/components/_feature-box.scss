@@ -8,6 +8,10 @@
 
   // ovo je potrebno kod hover-a da se napravi smooth translation po Y osi
   transition: transform 0.4s;
+
+  @include respond(tab-portb) {
+    padding: 2rem;
+  }
   &__icon {
     font-size: 6rem;
     margin-bottom: 0.5rem;
@@ -22,6 +26,10 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+
+    @include respond(tab-portb) {
+      margin-bottom: 0;
+    }
   }
 
   &:hover {

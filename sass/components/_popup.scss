@@ -16,6 +16,10 @@
   visibility: hidden;
   transition: all 0.3s;
 
+  @include respond(tab-port) {
+    padding: 10rem 20rem;
+  }
+
   &__content {
     @include absCenter;
 
@@ -39,12 +43,25 @@
     transform: translate(-50%, -50%) scale(0.2);
     // zadnji argumnet je delay
     transition: all 0.5s 0.3s;
+
+    @include respond(tab-land) {
+      width: 100%;
+    }
+    @include respond(phone) {
+      display: inline-block;
+    }
   }
   &__left {
     width: 33.333333%;
 
     // simulacija tabele zbog vertikalnog centriranja, pošto lijeva strana ima dvije slike, a desna je text
     display: table-cell;
+    @include respond(tab-land) {
+      vertical-align: middle;
+    }
+    @include respond(phone) {
+      width: 100%;
+    }
   }
   &__right {
     width: 66.666667%;
@@ -54,10 +71,18 @@
     display: table-cell;
     // vertikalno centriranje tablice - ovaj property je samo za tablice
     vertical-align: middle;
+    @include respond(phone) {
+      display: inline-block;
+      width: 100%;
+    }
   }
   &__img {
     display: block;
     width: 100%;
+    @include respond(phone) {
+      display: inline-block;
+      width: 40%;
+    }
   }
   &__text {
     font-size: 1.4rem;
@@ -72,6 +97,12 @@
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+    @include respond(tab-port) {
+      column-gap: 3rem;
+    }
+    @include respond(phone) {
+      column-gap: 2rem;
+    }
   }
 
   // uključivanje popup-a, ID na elementu popud je target na dugmetu za booking na rotirajućim karticama

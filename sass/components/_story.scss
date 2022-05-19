@@ -16,6 +16,16 @@
   // potrebno jer je __caption absolute
   position: relative;
 
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    // ovaj padding se koristi da element (krug) koji je pomaknut ne prelazi u padding zonu
+    padding-left: 7rem;
+  }
+  @include respond(phone) {
+    transform: skewX(0);
+  }
+
   &__shape {
     // treba obavezno staviti width and height da se dobije efekt da text obilazi sliku
     width: 15rem;
@@ -28,6 +38,9 @@
     clip-path: circle(50% at 50% 50%);
     // odmicanje kruga od texta - ne kristiti margin, i ispravljanje skewX
     transform: translateX(-3rem) skewX(12deg);
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
   }
   &__img {
     // fleksibilna slika, uvijek se mora postaviti širina ili visina
@@ -40,6 +53,9 @@
   &__text {
     // ispravka skewX
     transform: skewX(12deg);
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
   &__caption {
     position: absolute;
