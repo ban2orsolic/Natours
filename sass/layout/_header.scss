@@ -5,13 +5,30 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url(../img/hero.jpg);
+    url(../img/hero-small.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 
-  /* trokut - primjer */
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 120em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/hero.jpg);
+  }
+  // @media (min-width: 1920px) {
+  //   background-image: linear-gradient(
+  //       to right bottom,
+  //       rgba($color-secondary-light, 0.8),
+  //       rgba($color-primary-dark, 0.8)
+  //     ),
+  //     url(../img/hero.jpg);
+  // }
+
+  /* trokut -  primjer   */
   /* clip-path: polygon(50% 0, 100% 100%, 0 100%); */
 
   @include respond(phone) {

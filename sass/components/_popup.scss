@@ -106,7 +106,7 @@
   }
 
   // uključivanje popup-a, ID na elementu popud je target na dugmetu za booking na rotirajućim karticama
-  // open states
+  // open states-
   &:target {
     opacity: 1;
     visibility: visible;
