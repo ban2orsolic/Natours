@@ -1,7 +1,7 @@
 {
   "name": "natours",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "release": "21.5.2022",
   "description": "Landing page for Natours",
   "scripts": {
