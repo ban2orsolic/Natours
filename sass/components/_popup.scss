@@ -16,6 +16,13 @@
   visibility: hidden;
   transition: all 0.3s;
 
+  @supports (-webkit-backdrop-filter: blur(10px)) or
+    (backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-black, 0.2);
+  }
+
   @include respond(tab-port) {
     padding: 10rem 20rem;
   }
@@ -56,6 +63,7 @@
 
     // simulacija tabele zbog vertikalnog centriranja, pošto lijeva strana ima dvije slike, a desna je text
     display: table-cell;
+    vertical-align: middle;
     @include respond(tab-land) {
       vertical-align: middle;
     }
