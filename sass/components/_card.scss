@@ -173,7 +173,10 @@
   }
 
   //total rewrite  jer se mijenja izgled kartica, tj isklučuje se rotacija i pozadina se prebacuje naprijed, odnosno spaja se sa prednjim dijelom
-  @include respond(tab-port) {
+  // nije korišten INCLUDE mixina jer media query mora raditi na touch uređajima u landscape modu
+  //@include respond(tab-port)
+
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     //functionality
 
     height: auto;

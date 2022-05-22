@@ -10,7 +10,8 @@
     "build": "parcel build index.html --dist-dir ./dist",
     "style": "parcel build css/style.css",
     "update": "npm version patch && node js/app.js",
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css"
   },
   "repository": {
     "type": "git",
